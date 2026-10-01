@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://ftm024q54w7q"]
+
+[ext_resource type="Script" uid="uid://06g5spp4fppp" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bql8qv23s3mxn" path="res://enemy.tscn" id="2_lquwl"]
+[ext_resource type="Script" uid="uid://c1dtya310cwfc" path="res://player.gd" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dtn1iub0id4hj" path="res://icon.svg" id="4_272bh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(126, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sweqy"]
+radius = 63.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1bvp3")
+enemy_scene = ExtResource("2_lquwl")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("3_7mycd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("4_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="Hitbox" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox"]
+position = Vector2(93.913, 0)
+rotation = -6.28319
+shape = SubResource("CircleShape2D_sweqy")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="QuestionLabel" type="Label" parent="UI"]
+offset_left = 447.0
+offset_top = 34.0
+offset_right = 695.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 56
+text = "pregunta"
+
+[node name="HealthLabel" type="Label" parent="UI"]
+offset_left = 12.0
+offset_top = 558.0
+offset_right = 260.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 56
+text = "Vida"
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+offset_left = 884.0
+offset_top = 565.0
+offset_right = 1132.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 56
+text = "Puntaje"
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
