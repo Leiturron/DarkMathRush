@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://bql8qv23s3mxn"]
+
+[ext_resource type="Script" uid="uid://dksl3r0cc84a3" path="res://character/script/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://cutusjic6b3da" path="res://assets/Enemigo.png" id="2_t638k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddu6r"]
+atlas = ExtResource("2_t638k")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4bse"]
+atlas = ExtResource("2_t638k")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpuwd"]
+atlas = ExtResource("2_t638k")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stuxu"]
+atlas = ExtResource("2_t638k")
+region = Rect2(1920, 0, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8u2re"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddu6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4bse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpuwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stuxu")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(242.857, 178.571)
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+scale = Vector2(0.14, 0.14)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_4gyqm")
+
+[node name="VisualRoot" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="VisualRoot"]
+position = Vector2(107.143, -128.571)
+scale = Vector2(1.475, 1.475)
+sprite_frames = SubResource("SpriteFrames_8u2re")
+animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-28.5714, 260.714)
+shape = SubResource("RectangleShape2D_sweqy")
+
+[node name="ValueLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.714
+offset_top = -628.571
+offset_right = 284.286
+offset_bottom = -319.571
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 226
+text = "Valor"
+horizontal_alignment = 1

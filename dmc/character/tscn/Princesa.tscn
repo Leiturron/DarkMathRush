@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://du5pvu4avl7yk"]
+
+[ext_resource type="Texture2D" uid="uid://crtthye3h832e" path="res://assets/Princesa.png" id="1_c7pjh"]
+[ext_resource type="Script" uid="uid://c623pabn2qgem" path="res://character/script/princess.gd" id="2_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7pjh"]
+size = Vector2(153, 173)
+
+[node name="Princesa" type="Area2D"]
+script = ExtResource("2_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -56)
+scale = Vector2(8, 8)
+texture = ExtResource("1_c7pjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 1.5)
+shape = SubResource("RectangleShape2D_c7pjh")

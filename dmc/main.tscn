@@ -1,35 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ftm024q54w7q"]
+[gd_scene load_steps=3 format=3 uid="uid://ftm024q54w7q"]
 
 [ext_resource type="Script" uid="uid://06g5spp4fppp" path="res://main.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bql8qv23s3mxn" path="res://enemy.tscn" id="2_lquwl"]
-[ext_resource type="Script" uid="uid://c1dtya310cwfc" path="res://player.gd" id="3_7mycd"]
-[ext_resource type="Texture2D" uid="uid://dtn1iub0id4hj" path="res://icon.svg" id="4_272bh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
-size = Vector2(126, 128)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sweqy"]
-radius = 63.0
+[ext_resource type="PackedScene" uid="uid://b1i74d8lue0ln" path="res://character/tscn/player.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1bvp3")
-enemy_scene = ExtResource("2_lquwl")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("3_7mycd")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("4_272bh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_hqtel")
-
-[node name="Hitbox" type="Area2D" parent="Player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox"]
-position = Vector2(93.913, 0)
-rotation = -6.28319
-shape = SubResource("CircleShape2D_sweqy")
+[node name="Player" parent="." instance=ExtResource("3_h2yge")]
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 2.0
