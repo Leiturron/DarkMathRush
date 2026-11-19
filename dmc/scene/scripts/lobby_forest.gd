@@ -1,5 +1,7 @@
 extends Node2D
 
+const STYLED_DIALOG_SCRIPT: Script = preload("res://scene/scripts/styled_dialog.gd")
+
 const BATTLE_SCENE: String = "res://scene/BattleForest.tscn"
 
 @onready var dialogue_panel: Control = $CanvasLayer/DialoguePanel
@@ -11,8 +13,11 @@ var dialogue_action: String = ""
 
 func _ready() -> void:
 	GameManager.save_lobby_checkpoint(2)
+	if has_node("Spawn") and has_node("Player2"):
+		$Player2.global_position = $Spawn.global_position
 
 	dialogue_panel.hide()
+	_style_dialogue_panel()
 
 	$King.interacted.connect(_on_king_interacted)
 	if has_node("Princesa"):
@@ -22,11 +27,22 @@ func _ready() -> void:
 
 	# Mostrar una sola vez al volver tras completar el bosque
 	if GameManager.consume_cave_notice():
-		var notice := AcceptDialog.new()
+		var notice = STYLED_DIALOG_SCRIPT.new()
 		notice.title = "Nuevo destino desbloqueado"
 		notice.dialog_text = "¡Has completado el desafío del bosque! Acércate a la salida de la cueva y pulsa J para continuar."
 		add_child(notice)
 		notice.popup_centered()
+
+
+func _style_dialogue_panel() -> void:
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color(0.012, 0.028, 0.075, 0.96)
+	style.border_color = Color(0.69, 0.78, 0.92, 0.96)
+	style.set_border_width_all(2)
+	style.set_corner_radius_all(8)
+	dialogue_panel.add_theme_stylebox_override("panel", style)
+	dialogue_label.add_theme_font_override("font", preload("res://assets/ttf/TiejiliSC-Regular.ttf"))
+	dialogue_label.add_theme_color_override("font_color", Color(0.88, 0.92, 0.98))
 
 
 func _on_king_interacted() -> void:

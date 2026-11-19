@@ -1,11 +1,14 @@
 extends Node2D
 
+const STYLED_DIALOG_SCRIPT: Script = preload("res://scene/scripts/styled_dialog.gd")
+const BATTLE_HUD: Script = preload("res://scene/scripts/battle_hud.gd")
+
 @export var enemy_scene: PackedScene
 const HEART_SCENE: PackedScene = preload("res://character/tscn/heart.tscn")
 const MAX_HEALTH: int = 3
 
 var battle_finished: bool = false
-var result_dialog: AcceptDialog
+var result_dialog
 var wrong_questions: Array[Dictionary] = []
 
 var health: int = 3
@@ -16,6 +19,7 @@ var questions_oa2: Dictionary = {}
 var current_question_set: Array = []
 var current_correct_decimal: float = 0.0
 
+@onready var heartSound: AudioStreamPlayer = $heartSound
 
 func _ready() -> void:
 	# Colocar al jugador en su punto de aparición
@@ -31,7 +35,7 @@ func _ready() -> void:
 		push_error("No se pudieron cargar preguntas del nivel 2.")
 		return
 
-	result_dialog = AcceptDialog.new()
+	result_dialog = STYLED_DIALOG_SCRIPT.new()
 	result_dialog.process_mode = Node.PROCESS_MODE_ALWAYS
 	result_dialog.confirmed.connect(_on_result_confirmed)
 	add_child(result_dialog)
@@ -99,14 +103,15 @@ func generate_new_question() -> void:
 
 	# Mostrar solo la pregunta
 	$UI/QuestionLabel.text = question_text
+	BATTLE_HUD.display_question($UI, question_text)
 
 
 func get_enemy_value() -> float:
 	var question_text: String = $UI/QuestionLabel.text
 	var answers: Array = questions_oa2[question_text]
 
-	# El 30 % de los enemigos muestra la respuesta correcta
-	if randf() < 0.3:
+	# El 50 % de los enemigos muestra la respuesta correcta
+	if randf() < 0.5:
 		return current_correct_decimal
 
 	# Los demás muestran una respuesta incorrecta
@@ -174,8 +179,10 @@ func _record_wrong_question() -> void:
 		"correct_answer": current_correct_decimal
 	})
 
-func _get_wrong_questions_report() -> String:
+func _get_wrong_questions_report(monster_kill: bool = false) -> String:
 	if wrong_questions.is_empty():
+		if monster_kill:
+			return "\n\n¡Los monstruos te han dejado aturdido!"
 		return "\n\n¡Muy bien! No cometiste errores."
 
 	var report: String = "\n\nPreguntas incorrectas y su respuesta correcta:\n"
@@ -200,6 +207,7 @@ func _try_spawn_heart(drop_position: Vector2) -> void:
 
 
 func _on_heart_collected() -> void:
+	heartSound.play()
 	if health >= MAX_HEALTH:
 		return
 
@@ -208,7 +216,7 @@ func _on_heart_collected() -> void:
 
 
 func update_ui() -> void:
-	$UI/HealthLabel.text = "Vidas: %d" % health
+	BATTLE_HUD.update_health($UI, health)
 	$UI/ScoreLabel.text = "Puntaje: %d" % score
 
 
@@ -276,7 +284,9 @@ func _finish_battle(victory: bool) -> void:
 		result_dialog.title = "Derrota"
 		result_dialog.dialog_text = "Te has quedado sin vidas. Pulsa Aceptar para volver al bosque."
 
-	result_dialog.dialog_text += _get_wrong_questions_report()
+	result_dialog.dialog_text += _get_wrong_questions_report(
+		not victory and wrong_questions.is_empty()
+	)
 	get_tree().paused = true
 	result_dialog.popup_centered()
 

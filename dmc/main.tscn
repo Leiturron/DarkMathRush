@@ -1,12 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://ftm024q54w7q"]
+[gd_scene load_steps=2 format=3 uid="uid://ck4mwqtlkaals"]
 
-[ext_resource type="Script" uid="uid://06g5spp4fppp" path="res://main.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://b1i74d8lue0ln" path="res://character/tscn/player.tscn" id="3_h2yge"]
+[sub_resource type="GDScript" id="GDScript_7dm0k"]
+script/source = "extends CharacterBody2D
+
+signal enemy_judged(action_type: String, enemy_value: float)
+
+@export var speed: float = 100.0
+
+var player: Node2D = null
+var decimal_value: float = 0.0
+
+
+func setup(target_player: Node2D, decimal_val: float, speed_multiplier: float = 1.0) -> void:
+	player = target_player
+	decimal_value = decimal_val
+	speed *= speed_multiplier
+	$ValueLabel.text = str(decimal_value)
+
+
+func _physics_process(_delta: float) -> void:
+	if not is_instance_valid(player):
+		return
+
+	var direction := global_position.direction_to(player.global_position)
+	velocity = direction * speed
+	move_and_slide()
+
+
+func receive_attack(action_type: String) -> void:
+	enemy_judged.emit(action_type, decimal_value)
+	queue_free()
+"
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_1bvp3")
-
-[node name="Player" parent="." instance=ExtResource("3_h2yge")]
+script = SubResource("GDScript_7dm0k")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 2.0

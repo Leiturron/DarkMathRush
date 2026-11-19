@@ -1,0 +1,443 @@
+[gd_scene load_steps=15 format=3 uid="uid://b1u1jd6iep0p1"]
+
+[ext_resource type="Texture2D" uid="uid://b8d2yenrvaj6x" path="res://assets/newresource/mainBG.png" id="1_bg"]
+[ext_resource type="FontFile" uid="uid://dtgr6eravi8rw" path="res://assets/ttf/TiejiliSC-Regular.ttf" id="2_font"]
+[ext_resource type="Script" uid="uid://ctpyf3n3u51kx" path="res://scene/tutorial.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://bw22ftd6fc6sb" path="res://assets/newresource/tutorial1.png" id="4_ckkxd"]
+[ext_resource type="Texture2D" uid="uid://p4kbkw47ii5r" path="res://assets/newresource/Tutorial2.png" id="5_4eaws"]
+[ext_resource type="Texture2D" uid="uid://bi2nx0hydhurm" path="res://assets/newresource/tutorial3.png" id="6_dy6u0"]
+[ext_resource type="Texture2D" uid="uid://dugypt001cmyo" path="res://assets/newresource/tutorial4.png" id="7_wk25a"]
+[ext_resource type="Texture2D" uid="uid://b4ttrje2xe5br" path="res://assets/newresource/tutorial5.png" id="8_s1qki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty"]
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.008, 0.025, 0.07, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.69, 0.78, 0.91, 0.96)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 18
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="ArrowStyle"]
+bg_color = Color(0.025, 0.06, 0.13, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.61, 0.77, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="ArrowHoverStyle"]
+bg_color = Color(0.12, 0.22, 0.39, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.86, 0.97, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.025, 0.06, 0.13, 0.94)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.48, 0.68, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="FrameStyle"]
+bg_color = Color(0.015, 0.035, 0.085, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.61, 0.77, 0.9)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BackgroundShade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.008, 0.035, 0.36)
+
+[node name="BackButton" type="Button" parent="."]
+z_index = 20
+layout_mode = 0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 250.0
+offset_bottom = 66.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.78, 0.86, 0.95, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/focus = SubResource("StyleBoxEmpty")
+theme_override_styles/hover = SubResource("StyleBoxEmpty")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty")
+theme_override_styles/normal = SubResource("StyleBoxEmpty")
+text = "← VOLVER AL MENÚ"
+
+[node name="MainPanelCenter" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainPanel" type="PanelContainer" parent="MainPanelCenter"]
+custom_minimum_size = Vector2(1160, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("PanelStyle")
+
+[node name="MainMargin" type="MarginContainer" parent="MainPanelCenter/MainPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="MainContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.94, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 36
+text = "CÓMO JUGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TutorialBody" type="HBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent"]
+custom_minimum_size = Vector2(0, 460)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="LeftArrowSlot" type="CenterContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody"]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PreviousPageButton" type="Button" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/LeftArrowSlot"]
+visible = false
+custom_minimum_size = Vector2(64, 72)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.78, 0.86, 0.95, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("ArrowStyle")
+theme_override_styles/hover = SubResource("ArrowHoverStyle")
+theme_override_styles/pressed = SubResource("ArrowHoverStyle")
+theme_override_styles/normal = SubResource("ArrowStyle")
+text = "←"
+
+[node name="PageStack" type="Control" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="PageOne" type="Control" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cards" type="HBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="PlayerCard" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="CardContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/PlayerCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ImageFrame" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/PlayerCard/CardContent"]
+custom_minimum_size = Vector2(0, 280)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("FrameStyle")
+
+[node name="PlayerImage" type="TextureRect" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/PlayerCard/CardContent/ImageFrame"]
+texture_filter = 3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_ckkxd")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InstructionText" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/PlayerCard/CardContent"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.88, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = "Usa WASD para mover al héroe. Durante el combate, esquiva a los enemigos y observa las respuestas que muestran."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="KingCard" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="CardContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/KingCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ImageFrame" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/KingCard/CardContent"]
+custom_minimum_size = Vector2(0, 280)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("FrameStyle")
+
+[node name="KingImage" type="TextureRect" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/KingCard/CardContent/ImageFrame"]
+texture_filter = 3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_4eaws")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InstructionText" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageOne/Cards/KingCard/CardContent"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.88, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = "Acércate al rey y pulsa J para hablar con él y aceptar el desafío de la región actual."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PageTwo" type="Control" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cards" type="HBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="CorrectCard" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="CardContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/CorrectCard"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ImageFrame" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/CorrectCard/CardContent"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("FrameStyle")
+
+[node name="QuestionImage" type="TextureRect" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/CorrectCard/CardContent/ImageFrame"]
+texture_filter = 3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_dy6u0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InstructionText" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/CorrectCard/CardContent"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.88, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 18
+text = "Resuelve la pregunta y busca la respuesta correcta. Pulsa J para atacar al enemigo que la muestra."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="WrongCard" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="CardContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/WrongCard"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ImageFrame" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/WrongCard/CardContent"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("FrameStyle")
+
+[node name="WrongEnemyImage" type="TextureRect" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/WrongCard/CardContent/ImageFrame"]
+texture_filter = 3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_wk25a")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InstructionText" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/WrongCard/CardContent"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.88, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 18
+text = "Pulsa K para atacar al enemigo que muestra una respuesta incorrecta."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PortalCard" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="CardContent" type="VBoxContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/PortalCard"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ImageFrame" type="PanelContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/PortalCard/CardContent"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("FrameStyle")
+
+[node name="PortalImage" type="TextureRect" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/PortalCard/CardContent/ImageFrame"]
+texture_filter = 3
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_s1qki")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InstructionText" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/PageStack/PageTwo/Cards/PortalCard/CardContent"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.88, 0.96, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 18
+text = "Al ganar el combate, vuelve al escenario principal. Acércate a la puerta y pulsa J para viajar a la nueva región."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="RightArrowSlot" type="CenterContainer" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody"]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NextPageButton" type="Button" parent="MainPanelCenter/MainPanel/MainMargin/MainContent/TutorialBody/RightArrowSlot"]
+custom_minimum_size = Vector2(64, 72)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.78, 0.86, 0.95, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("ArrowStyle")
+theme_override_styles/hover = SubResource("ArrowHoverStyle")
+theme_override_styles/pressed = SubResource("ArrowHoverStyle")
+theme_override_styles/normal = SubResource("ArrowStyle")
+text = "→"
+
+[node name="PageIndicator" type="Label" parent="MainPanelCenter/MainPanel/MainMargin/MainContent"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.73, 0.89, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 17
+text = "PÁGINA 1 / 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="FadeRect" type="ColorRect" parent="TransitionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

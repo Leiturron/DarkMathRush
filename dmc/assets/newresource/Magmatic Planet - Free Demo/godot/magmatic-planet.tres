@@ -1,0 +1,59 @@
+[gd_resource type="TileSet" load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="../sheets/props-32x32.png" id="1_props_32x32"]
+[ext_resource type="Texture2D" path="../sheets/props-64x96.png" id="2_props_64x96"]
+[ext_resource type="Texture2D" path="../sheets/terrain.png" id="3_terrain"]
+
+[sub_resource type="TileSetAtlasSource" id="src_props_32x32"]
+resource_name = "props-32x32"
+texture = ExtResource("1_props_32x32")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="src_props_64x96"]
+resource_name = "props-64x96"
+texture = ExtResource("2_props_64x96")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 3)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-16, -32)
+2:0/size_in_atlas = Vector2i(2, 3)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(-16, -32)
+4:0/size_in_atlas = Vector2i(2, 3)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(-16, -32)
+6:0/size_in_atlas = Vector2i(2, 3)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(-16, -32)
+
+[sub_resource type="TileSetAtlasSource" id="src_terrain"]
+resource_name = "terrain"
+texture = ExtResource("3_terrain")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[resource]
+resource_name = "Magmatic Planet"
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("src_props_32x32")
+sources/1 = SubResource("src_props_64x96")
+sources/2 = SubResource("src_terrain")

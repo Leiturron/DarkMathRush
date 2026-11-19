@@ -1,0 +1,3323 @@
+{
+  "type": "regular-grid-tilesheet",
+  "image": "topdown_dungeon_castle_mega_clean_tilesheet.png",
+  "count": 144,
+  "columns": 8,
+  "rows": 18,
+  "cell_width": 192,
+  "cell_height": 192,
+  "tiles": [
+    {
+      "name": "throne_king_gilded",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_throne_king_gilded_01.png",
+      "row": 0,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 33,
+        "y": 0,
+        "width": 126,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 183
+      }
+    },
+    {
+      "name": "throne_queen_velvet",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_throne_queen_velvet_01.png",
+      "row": 0,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 226,
+        "y": 0,
+        "width": 124,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "dais_steps_carpet",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_dais_steps_carpet_01.png",
+      "row": 0,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 57,
+        "width": 192,
+        "height": 135
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "tapestry_wall_blank",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_tapestry_wall_blank_01.png",
+      "row": 0,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 598,
+        "y": 0,
+        "width": 147,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 183
+      }
+    },
+    {
+      "name": "shield_display_crossed_swords",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_shield_display_crossed_swords_01.png",
+      "row": 0,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 791,
+        "y": 0,
+        "width": 146,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "statue_knight_plinth",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_statue_knight_plinth_01.png",
+      "row": 0,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1010,
+        "y": 0,
+        "width": 92,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 183
+      }
+    },
+    {
+      "name": "banner_stand_pair",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_banner_stand_pair_01.png",
+      "row": 0,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1163,
+        "y": 0,
+        "width": 170,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 183
+      }
+    },
+    {
+      "name": "candle_stand_wrought_tall",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_candle_stand_wrought_tall_01.png",
+      "row": 0,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 0,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1389,
+        "y": 0,
+        "width": 101,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "rug_royal_runner",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_rug_royal_runner_01.png",
+      "row": 1,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 40,
+        "y": 192,
+        "width": 112,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "pedestal_crown_cushion",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_pedestal_crown_cushion_01.png",
+      "row": 1,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 207,
+        "y": 192,
+        "width": 162,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "column_stone_carved",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_column_stone_carved_01.png",
+      "row": 1,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 433,
+        "y": 192,
+        "width": 94,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "window_stained_glass_arch",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_window_stained_glass_arch_01.png",
+      "row": 1,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 602,
+        "y": 192,
+        "width": 139,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "portrait_frame_ornate_blank",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_portrait_frame_ornate_blank_01.png",
+      "row": 1,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 780,
+        "y": 192,
+        "width": 167,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "halberd_rack_royal_guard",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_halberd_rack_royal_guard_01.png",
+      "row": 1,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 963,
+        "y": 192,
+        "width": 186,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "side_table_goblet_ewer",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_side_table_goblet_ewer_01.png",
+      "row": 1,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1181,
+        "y": 192,
+        "width": 134,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "kneeling_cushion_velvet",
+      "category": "throne_hall",
+      "file": "Tiles/ThroneHall/dncastle_throne_hall_kneeling_cushion_velvet_01.png",
+      "row": 1,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 192,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 260,
+        "width": 192,
+        "height": 124
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "banquet_table_cloth_set",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_banquet_table_cloth_set_01.png",
+      "row": 2,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 493,
+        "width": 192,
+        "height": 83
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 184
+      }
+    },
+    {
+      "name": "chair_highback_carved",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_chair_highback_carved_01.png",
+      "row": 2,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 231,
+        "y": 384,
+        "width": 113,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "roast_boar_platter",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_roast_boar_platter_01.png",
+      "row": 2,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 454,
+        "width": 192,
+        "height": 122
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "goblet_group_silver",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_goblet_group_silver_01.png",
+      "row": 2,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 402,
+        "width": 192,
+        "height": 174
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 178
+      }
+    },
+    {
+      "name": "wine_ewer_tray",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_wine_ewer_tray_01.png",
+      "row": 2,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 388,
+        "width": 192,
+        "height": 188
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 178
+      }
+    },
+    {
+      "name": "chandelier_crystal_gold",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_chandelier_crystal_gold_01.png",
+      "row": 2,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 385,
+        "width": 192,
+        "height": 191
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "fireplace_marble_ornate",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_fireplace_marble_ornate_01.png",
+      "row": 2,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 405,
+        "width": 192,
+        "height": 171
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "bed_four_poster_curtains",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_bed_four_poster_curtains_01.png",
+      "row": 2,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 384,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1347,
+        "y": 384,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "wardrobe_carved_double",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_wardrobe_carved_double_01.png",
+      "row": 3,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 15,
+        "y": 576,
+        "width": 161,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "dressing_table_mirror",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_dressing_table_mirror_01.png",
+      "row": 3,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 196,
+        "y": 576,
+        "width": 184,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "bathtub_copper_claw",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_bathtub_copper_claw_01.png",
+      "row": 3,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 647,
+        "width": 192,
+        "height": 121
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "folding_screen_painted",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_folding_screen_painted_01.png",
+      "row": 3,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "chest_drawers_ornate",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_chest_drawers_ornate_01.png",
+      "row": 3,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 583,
+        "width": 192,
+        "height": 185
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "fruit_bowl_gilded",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_fruit_bowl_gilded_01.png",
+      "row": 3,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 587,
+        "width": 192,
+        "height": 181
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "cushion_pile_velvet",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_cushion_pile_velvet_01.png",
+      "row": 3,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 622,
+        "width": 192,
+        "height": 146
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "harp_gilded_standing",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_harp_gilded_standing_01.png",
+      "row": 3,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 576,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1377,
+        "y": 576,
+        "width": 126,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "rug_fur_round",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_rug_fur_round_01.png",
+      "row": 4,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 850,
+        "width": 192,
+        "height": 110
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "curtain_window_drape",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_curtain_window_drape_01.png",
+      "row": 4,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 204,
+        "y": 768,
+        "width": 168,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "candelabrum_wall_crest",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_candelabrum_wall_crest_01.png",
+      "row": 4,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 391,
+        "y": 768,
+        "width": 177,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "footstool_padded",
+      "category": "feast_living",
+      "file": "Tiles/FeastLiving/dncastle_feast_living_footstool_padded_01.png",
+      "row": 4,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 794,
+        "width": 192,
+        "height": 166
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 178
+      }
+    },
+    {
+      "name": "cauldron_bubbling_green",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_cauldron_bubbling_green_01.png",
+      "row": 4,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 770,
+        "width": 192,
+        "height": 190
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "alembic_distiller_glass",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_alembic_distiller_glass_01.png",
+      "row": 4,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 977,
+        "y": 768,
+        "width": 158,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "crystal_floating_glow",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_crystal_floating_glow_01.png",
+      "row": 4,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1185,
+        "y": 768,
+        "width": 126,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "rune_table_carved",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_rune_table_carved_01.png",
+      "row": 4,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 768,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1345,
+        "y": 768,
+        "width": 189,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "lectern_spellbook_open",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_lectern_spellbook_open_01.png",
+      "row": 5,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 3,
+        "y": 960,
+        "width": 186,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "telescope_brass_standing",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_telescope_brass_standing_01.png",
+      "row": 5,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 209,
+        "y": 960,
+        "width": 157,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "orrery_brass_planets",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_orrery_brass_planets_01.png",
+      "row": 5,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 386,
+        "y": 960,
+        "width": 188,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "shelf_ingredient_jars",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_shelf_ingredient_jars_01.png",
+      "row": 5,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 586,
+        "y": 960,
+        "width": 171,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "mortar_pestle_large",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_mortar_pestle_large_01.png",
+      "row": 5,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 782,
+        "y": 960,
+        "width": 164,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "staff_rack_wooden",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_staff_rack_wooden_01.png",
+      "row": 5,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 966,
+        "y": 960,
+        "width": 179,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "circle_enchanting_glow_floor",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_circle_enchanting_glow_floor_01.png",
+      "row": 5,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 1015,
+        "width": 192,
+        "height": 137
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "crystal_cluster_mana",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_crystal_cluster_mana_01.png",
+      "row": 5,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 960,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1372,
+        "y": 960,
+        "width": 136,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "station_potion_brewing",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_station_potion_brewing_01.png",
+      "row": 6,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 16,
+        "y": 1152,
+        "width": 159,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "hourglass_large_ornate",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_hourglass_large_ornate_01.png",
+      "row": 6,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 230,
+        "y": 1152,
+        "width": 115,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "globe_celestial_stand",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_globe_celestial_stand_01.png",
+      "row": 6,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 396,
+        "y": 1152,
+        "width": 168,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "cabinet_scroll_pigeonholes",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_cabinet_scroll_pigeonholes_01.png",
+      "row": 6,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 579,
+        "y": 1152,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "pedestal_crystal_ball",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_pedestal_crystal_ball_01.png",
+      "row": 6,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 805,
+        "y": 1152,
+        "width": 118,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "book_pile_leather",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_book_pile_leather_01.png",
+      "row": 6,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 1164,
+        "width": 192,
+        "height": 180
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "candle_stack_melted_books",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_candle_stack_melted_books_01.png",
+      "row": 6,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1158,
+        "y": 1152,
+        "width": 179,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "brazier_arcane_blue_flame",
+      "category": "wizard_alchemy",
+      "file": "Tiles/WizardAlchemy/dncastle_wizard_alchemy_brazier_arcane_blue_flame_01.png",
+      "row": 6,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 1152,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1364,
+        "y": 1152,
+        "width": 152,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "door_cell_iron_bars",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_door_cell_iron_bars_01.png",
+      "row": 7,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 13,
+        "y": 1344,
+        "width": 166,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "bunk_straw_wooden",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_bunk_straw_wooden_01.png",
+      "row": 7,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 195,
+        "y": 1344,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "manacles_wall_chains",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_manacles_wall_chains_01.png",
+      "row": 7,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 1348,
+        "width": 192,
+        "height": 188
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "skeleton_sprawled_floor",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_skeleton_sprawled_floor_01.png",
+      "row": 7,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 588,
+        "y": 1344,
+        "width": 167,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "hole_rat_wall_empty",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_hole_rat_wall_empty_01.png",
+      "row": 7,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 1414,
+        "width": 192,
+        "height": 122
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "bowl_food_tin_jug",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_bowl_food_tin_jug_01.png",
+      "row": 7,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 1411,
+        "width": 192,
+        "height": 125
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "bucket_wooden_cell",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_bucket_wooden_cell_01.png",
+      "row": 7,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1167,
+        "y": 1344,
+        "width": 162,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 177
+      }
+    },
+    {
+      "name": "rack_torture_wooden",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_rack_torture_wooden_01.png",
+      "row": 7,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 1344,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 1367,
+        "width": 192,
+        "height": 169
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "iron_maiden_standing",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_iron_maiden_standing_01.png",
+      "row": 8,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 38,
+        "y": 1536,
+        "width": 116,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "furnace_branding_irons",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_furnace_branding_irons_01.png",
+      "row": 8,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 200,
+        "y": 1536,
+        "width": 176,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "gibbet_cage_standing",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_gibbet_cage_standing_01.png",
+      "row": 8,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 412,
+        "y": 1536,
+        "width": 136,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "block_executioner_axe",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_block_executioner_axe_01.png",
+      "row": 8,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 583,
+        "y": 1536,
+        "width": 177,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 179
+      }
+    },
+    {
+      "name": "pile_chain_heavy",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_pile_chain_heavy_01.png",
+      "row": 8,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 1581,
+        "width": 192,
+        "height": 147
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "table_guard_keys",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_table_guard_keys_01.png",
+      "row": 8,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 1547,
+        "width": 192,
+        "height": 181
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "sconce_iron_dripping_candle",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_sconce_iron_dripping_candle_01.png",
+      "row": 8,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1166,
+        "y": 1536,
+        "width": 164,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "ball_chain_prisoner",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_ball_chain_prisoner_01.png",
+      "row": 8,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 1536,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 1588,
+        "width": 192,
+        "height": 140
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "rack_whip_wall",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_rack_whip_wall_01.png",
+      "row": 9,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 3,
+        "y": 1728,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 178
+      }
+    },
+    {
+      "name": "grate_floor_drain",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_grate_floor_drain_01.png",
+      "row": 9,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 192,
+        "y": 1767,
+        "width": 192,
+        "height": 153
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 179
+      }
+    },
+    {
+      "name": "straw_pile_dirty",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_straw_pile_dirty_01.png",
+      "row": 9,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 1777,
+        "width": 192,
+        "height": 143
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "bars_window_cell",
+      "category": "dungeon_cells",
+      "file": "Tiles/DungeonCells/dncastle_dungeon_cells_bars_window_cell_01.png",
+      "row": 9,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 587,
+        "y": 1728,
+        "width": 169,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "sarcophagus_stone_carved",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_sarcophagus_stone_carved_01.png",
+      "row": 9,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 1753,
+        "width": 192,
+        "height": 167
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "niche_bones_arranged",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_niche_bones_arranged_01.png",
+      "row": 9,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 981,
+        "y": 1728,
+        "width": 150,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "gravestone_cross_stone",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_gravestone_cross_stone_01.png",
+      "row": 9,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1191,
+        "y": 1728,
+        "width": 113,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "gravestone_rounded_moss",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_gravestone_rounded_moss_01.png",
+      "row": 9,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 1728,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1364,
+        "y": 1728,
+        "width": 151,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "altar_tomb_candles",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_altar_tomb_candles_01.png",
+      "row": 10,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 1969,
+        "width": 192,
+        "height": 143
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "statue_mourning_angel",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_statue_mourning_angel_01.png",
+      "row": 10,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 217,
+        "y": 1920,
+        "width": 142,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "coffin_wooden_closed",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_coffin_wooden_closed_01.png",
+      "row": 10,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 424,
+        "y": 1920,
+        "width": 111,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "cluster_candles_dripping",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_cluster_candles_dripping_01.png",
+      "row": 10,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 583,
+        "y": 1920,
+        "width": 178,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "urn_funeral_group",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_urn_funeral_group_01.png",
+      "row": 10,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 774,
+        "y": 1920,
+        "width": 179,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "gate_crypt_iron",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_gate_crypt_iron_01.png",
+      "row": 10,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 979,
+        "y": 1920,
+        "width": 153,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "pile_bones_arranged",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_pile_bones_arranged_01.png",
+      "row": 10,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 1968,
+        "width": 192,
+        "height": 144
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "grave_freshly_dug",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_grave_freshly_dug_01.png",
+      "row": 10,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 1920,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 1951,
+        "width": 192,
+        "height": 161
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "mound_dirt_shovel",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_mound_dirt_shovel_01.png",
+      "row": 11,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 6,
+        "y": 2112,
+        "width": 180,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "stand_wreath_dried",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_stand_wreath_dried_01.png",
+      "row": 11,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 212,
+        "y": 2112,
+        "width": 151,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "obelisk_small_weathered",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_obelisk_small_weathered_01.png",
+      "row": 11,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 423,
+        "y": 2112,
+        "width": 113,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "door_mausoleum_stone",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_door_mausoleum_stone_01.png",
+      "row": 11,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 591,
+        "y": 2112,
+        "width": 162,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "plinth_gargoyle_statue",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_plinth_gargoyle_statue_01.png",
+      "row": 11,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 793,
+        "y": 2112,
+        "width": 141,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 180
+      }
+    },
+    {
+      "name": "tree_dead_small",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_tree_dead_small_01.png",
+      "row": 11,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 986,
+        "y": 2112,
+        "width": 139,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "lantern_grave_hanging",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_lantern_grave_hanging_01.png",
+      "row": 11,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1192,
+        "y": 2112,
+        "width": 112,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "bier_funeral_cloth",
+      "category": "crypt_graveyard",
+      "file": "Tiles/CryptGraveyard/dncastle_crypt_graveyard_bier_funeral_cloth_01.png",
+      "row": 11,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 2112,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 2146,
+        "width": 192,
+        "height": 158
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "trap_spikes_floor",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_trap_spikes_floor_01.png",
+      "row": 12,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 2327,
+        "width": 192,
+        "height": 169
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "plate_pressure_stone",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_plate_pressure_stone_01.png",
+      "row": 12,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 192,
+        "y": 2363,
+        "width": 192,
+        "height": 133
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "lever_wall_mounted",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_lever_wall_mounted_01.png",
+      "row": 12,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 419,
+        "y": 2304,
+        "width": 122,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "portcullis_iron_gate",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_portcullis_iron_gate_01.png",
+      "row": 12,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 2313,
+        "width": 192,
+        "height": 183
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "door_sealed_runes",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_door_sealed_runes_01.png",
+      "row": 12,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 782,
+        "y": 2304,
+        "width": 163,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "circle_teleport_glow",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_circle_teleport_glow_01.png",
+      "row": 12,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 2362,
+        "width": 192,
+        "height": 134
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "trap_pit_open",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_trap_pit_open_01.png",
+      "row": 12,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 2334,
+        "width": 192,
+        "height": 162
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "trap_bear_iron",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_trap_bear_iron_01.png",
+      "row": 12,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 2304,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 2340,
+        "width": 192,
+        "height": 156
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 180
+      }
+    },
+    {
+      "name": "pegs_tripwire_set",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_pegs_tripwire_set_01.png",
+      "row": 13,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 2580,
+        "width": 192,
+        "height": 108
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "mechanism_gears_wall",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_mechanism_gears_wall_01.png",
+      "row": 13,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 192,
+        "y": 2510,
+        "width": 192,
+        "height": 178
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "winch_chain_crank",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_winch_chain_crank_01.png",
+      "row": 13,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 2524,
+        "width": 192,
+        "height": 164
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "bookcase_secret_door",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_bookcase_secret_door_01.png",
+      "row": 13,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 2496,
+        "width": 191,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "bell_alarm_mounted",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_bell_alarm_mounted_01.png",
+      "row": 13,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 796,
+        "y": 2496,
+        "width": 135,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "barricade_spikes_wood",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_barricade_spikes_wood_01.png",
+      "row": 13,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 2501,
+        "width": 192,
+        "height": 187
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "blade_pendulum_swinging",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_blade_pendulum_swinging_01.png",
+      "row": 13,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1165,
+        "y": 2496,
+        "width": 165,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "wall_dart_holes",
+      "category": "traps_mechanisms",
+      "file": "Tiles/TrapsMechanisms/dncastle_traps_mechanisms_wall_dart_holes_01.png",
+      "row": 13,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 2496,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 2516,
+        "width": 192,
+        "height": 172
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "pile_gold_coins_large",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_pile_gold_coins_large_01.png",
+      "row": 14,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 0,
+        "y": 2748,
+        "width": 192,
+        "height": 132
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 183
+      }
+    },
+    {
+      "name": "pile_gems_mixed",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_pile_gems_mixed_01.png",
+      "row": 14,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 192,
+        "y": 2739,
+        "width": 192,
+        "height": 141
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 178
+      }
+    },
+    {
+      "name": "chest_overflowing_gold",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_chest_overflowing_gold_01.png",
+      "row": 14,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 391,
+        "y": 2688,
+        "width": 178,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "stand_jewelry_display",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_stand_jewelry_display_01.png",
+      "row": 14,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 596,
+        "y": 2688,
+        "width": 151,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "pedestal_relic_glass",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_pedestal_relic_glass_01.png",
+      "row": 14,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 798,
+        "y": 2688,
+        "width": 131,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "stack_gold_bars",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_stack_gold_bars_01.png",
+      "row": 14,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 2725,
+        "width": 192,
+        "height": 155
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "door_vault_round_iron",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_door_vault_round_iron_01.png",
+      "row": 14,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1155,
+        "y": 2688,
+        "width": 186,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "chest_mimic_teeth",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_chest_mimic_teeth_01.png",
+      "row": 14,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 2688,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 2702,
+        "width": 192,
+        "height": 178
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "stalagmite_group",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_stalagmite_group_01.png",
+      "row": 15,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 5,
+        "y": 2880,
+        "width": 182,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "mushrooms_glowing_cluster",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_mushrooms_glowing_cluster_01.png",
+      "row": 15,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 197,
+        "y": 2880,
+        "width": 181,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 179
+      }
+    },
+    {
+      "name": "web_spider_corner",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_web_spider_corner_01.png",
+      "row": 15,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 396,
+        "y": 2880,
+        "width": 167,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "sacs_egg_spider",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_sacs_egg_spider_01.png",
+      "row": 15,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "puddle_ooze_green",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_puddle_ooze_green_01.png",
+      "row": 15,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 768,
+        "y": 2951,
+        "width": 192,
+        "height": 121
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "vein_crystal_wall",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_vein_crystal_wall_01.png",
+      "row": 15,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 964,
+        "y": 2880,
+        "width": 183,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "nest_treasure_gold",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_nest_treasure_gold_01.png",
+      "row": 15,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 2922,
+        "width": 192,
+        "height": 150
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "minecart_wooden_ore",
+      "category": "vault_cave",
+      "file": "Tiles/VaultCave/dncastle_vault_cave_minecart_wooden_ore_01.png",
+      "row": 15,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 2880,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 2895,
+        "width": 192,
+        "height": 177
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "floor_stone_dungeon_rough",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_floor_stone_dungeon_rough_01.png",
+      "row": 16,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 4,
+        "y": 3072,
+        "width": 183,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "floor_carpet_castle_strip",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_floor_carpet_castle_strip_01.png",
+      "row": 16,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 197,
+        "y": 3072,
+        "width": 182,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "floor_marble_checker",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_floor_marble_checker_01.png",
+      "row": 16,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 387,
+        "y": 3072,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "floor_cave_dirt",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_floor_cave_dirt_01.png",
+      "row": 16,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 580,
+        "y": 3072,
+        "width": 183,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "wall_dungeon_stone",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_wall_dungeon_stone_01.png",
+      "row": 16,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 770,
+        "y": 3072,
+        "width": 187,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "wall_castle_ashlar",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_wall_castle_ashlar_01.png",
+      "row": 16,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 3073,
+        "width": 192,
+        "height": 191
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "wall_iron_bars_segment",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_wall_iron_bars_segment_01.png",
+      "row": 16,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1152,
+        "y": 3072,
+        "width": 191,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "wall_cave_rock",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_wall_cave_rock_01.png",
+      "row": 16,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 3072,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1345,
+        "y": 3072,
+        "width": 189,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "arch_doorway_stone",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_arch_doorway_stone_01.png",
+      "row": 17,
+      "column": 0,
+      "cell": {
+        "x": 0,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 6,
+        "y": 3264,
+        "width": 179,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 181
+      }
+    },
+    {
+      "name": "stair_spiral_stone",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_stair_spiral_stone_01.png",
+      "row": 17,
+      "column": 1,
+      "cell": {
+        "x": 192,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 197,
+        "y": 3264,
+        "width": 182,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "stair_straight_stone",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_stair_straight_stone_01.png",
+      "row": 17,
+      "column": 2,
+      "cell": {
+        "x": 384,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 384,
+        "y": 3265,
+        "width": 192,
+        "height": 191
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "edge_battlement_crenellated",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_edge_battlement_crenellated_01.png",
+      "row": 17,
+      "column": 3,
+      "cell": {
+        "x": 576,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 576,
+        "y": 3325,
+        "width": 192,
+        "height": 131
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    },
+    {
+      "name": "floor_cracked_stone",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_floor_cracked_stone_01.png",
+      "row": 17,
+      "column": 4,
+      "cell": {
+        "x": 768,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 770,
+        "y": 3264,
+        "width": 188,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "wall_secret_seam",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_wall_secret_seam_01.png",
+      "row": 17,
+      "column": 5,
+      "cell": {
+        "x": 960,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 960,
+        "y": 3266,
+        "width": 192,
+        "height": 190
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 181
+      }
+    },
+    {
+      "name": "gate_double_iron",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_gate_double_iron_01.png",
+      "row": 17,
+      "column": 6,
+      "cell": {
+        "x": 1152,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1155,
+        "y": 3264,
+        "width": 185,
+        "height": 192
+      },
+      "anchor_in_cell": {
+        "x": 95,
+        "y": 182
+      }
+    },
+    {
+      "name": "bridge_stone_arch",
+      "category": "architecture",
+      "file": "Tiles/Architecture/dncastle_architecture_bridge_stone_arch_01.png",
+      "row": 17,
+      "column": 7,
+      "cell": {
+        "x": 1344,
+        "y": 3264,
+        "width": 192,
+        "height": 192
+      },
+      "sprite": {
+        "x": 1344,
+        "y": 3302,
+        "width": 192,
+        "height": 154
+      },
+      "anchor_in_cell": {
+        "x": 96,
+        "y": 182
+      }
+    }
+  ]
+}

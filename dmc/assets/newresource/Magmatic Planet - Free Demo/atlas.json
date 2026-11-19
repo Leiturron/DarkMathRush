@@ -1,0 +1,243 @@
+{
+ "cell": 32,
+ "margin": 0,
+ "spacing": 0,
+ "sheets": {
+  "sheets/terrain.png": {
+   "w": 544,
+   "h": 64,
+   "cell_w": 32,
+   "cell_h": 32
+  },
+  "sheets/props-32x32.png": {
+   "w": 512,
+   "h": 224,
+   "cell_w": 32,
+   "cell_h": 32
+  },
+  "sheets/props-64x96.png": {
+   "w": 512,
+   "h": 96,
+   "cell_w": 64,
+   "cell_h": 96
+  }
+ },
+ "assets": {
+  "lava-path/tile_00": {
+   "sheet": "sheets/terrain.png",
+   "x": 0,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_00.png",
+   "category": "lava-path"
+  },
+  "lava-path/tile_06": {
+   "sheet": "sheets/terrain.png",
+   "x": 32,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_06.png",
+   "category": "lava-path"
+  },
+  "lava-path/tile_07": {
+   "sheet": "sheets/terrain.png",
+   "x": 64,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_07.png",
+   "category": "lava-path"
+  },
+  "lava-path/tile_08": {
+   "sheet": "sheets/terrain.png",
+   "x": 96,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_08.png",
+   "category": "lava-path"
+  },
+  "lava-path/tile_09": {
+   "sheet": "sheets/terrain.png",
+   "x": 128,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_09.png",
+   "category": "lava-path"
+  },
+  "lava-path/tile_16": {
+   "sheet": "sheets/terrain.png",
+   "x": 160,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/lava-path/tile_16.png",
+   "category": "lava-path"
+  },
+  "rock-bank/tile_00": {
+   "sheet": "sheets/terrain.png",
+   "x": 0,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/rock-bank/tile_00.png",
+   "category": "rock-bank"
+  },
+  "rock-bank/tile_01": {
+   "sheet": "sheets/terrain.png",
+   "x": 32,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/rock-bank/tile_01.png",
+   "category": "rock-bank"
+  },
+  "rock-bank/tile_02": {
+   "sheet": "sheets/terrain.png",
+   "x": 64,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/rock-bank/tile_02.png",
+   "category": "rock-bank"
+  },
+  "rock-bank/tile_03": {
+   "sheet": "sheets/terrain.png",
+   "x": 96,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "terrain/rock-bank/tile_03.png",
+   "category": "rock-bank"
+  },
+  "amber-crystal-formations/00-single-tall-amber": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "props/amber-crystal-formations/00-single-tall-amber.png",
+   "category": "amber-crystal-formations"
+  },
+  "amber-crystal-formations/29-wide-amber-crystal-fan": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 32,
+   "y": 0,
+   "w": 32,
+   "h": 32,
+   "file": "props/amber-crystal-formations/29-wide-amber-crystal-fan.png",
+   "category": "amber-crystal-formations"
+  },
+  "boulders-rubble-scree/00-single-rounded-boulder": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "props/boulders-rubble-scree/00-single-rounded-boulder.png",
+   "category": "boulders-rubble-scree"
+  },
+  "boulders-rubble-scree/01-angular-boulder": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 32,
+   "y": 32,
+   "w": 32,
+   "h": 32,
+   "file": "props/boulders-rubble-scree/01-angular-boulder.png",
+   "category": "boulders-rubble-scree"
+  },
+  "crystal-obsidian-sulfur-nodes/05-round-rock-geode-cracked": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 64,
+   "w": 32,
+   "h": 32,
+   "file": "props/crystal-obsidian-sulfur-nodes/05-round-rock-geode-cracked.png",
+   "category": "crystal-obsidian-sulfur-nodes"
+  },
+  "fossils-titan-remains/28-spine-with-ribs-attached": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 96,
+   "w": 32,
+   "h": 32,
+   "file": "props/fossils-titan-remains/28-spine-with-ribs-attached.png",
+   "category": "fossils-titan-remains"
+  },
+  "geysers-vents-spatter-cones/00-small-squat-spatter-cone": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 128,
+   "w": 32,
+   "h": 32,
+   "file": "props/geysers-vents-spatter-cones/00-small-squat-spatter-cone.png",
+   "category": "geysers-vents-spatter-cones"
+  },
+  "heat-plants-fire-flora/00-small-fan-of-five-ember": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 160,
+   "w": 32,
+   "h": 32,
+   "file": "props/heat-plants-fire-flora/00-small-fan-of-five-ember.png",
+   "category": "heat-plants-fire-flora"
+  },
+  "heat-plants-fire-flora/02-low-round-spiky-succulent": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 32,
+   "y": 160,
+   "w": 32,
+   "h": 32,
+   "file": "props/heat-plants-fire-flora/02-low-round-spiky-succulent.png",
+   "category": "heat-plants-fire-flora"
+  },
+  "lava-pools-falls/00-round-lava-pool-in-rock-rim": {
+   "sheet": "sheets/props-32x32.png",
+   "x": 0,
+   "y": 192,
+   "w": 32,
+   "h": 32,
+   "file": "props/lava-pools-falls/00-round-lava-pool-in-rock-rim.png",
+   "category": "lava-pools-falls"
+  },
+  "ridge-wall-modules/06-corner-es": {
+   "sheet": "sheets/props-64x96.png",
+   "x": 0,
+   "y": 0,
+   "w": 64,
+   "h": 96,
+   "file": "props/ridge-wall-modules/06-corner-es.png",
+   "category": "ridge-wall-modules"
+  },
+  "ridge-wall-modules/07-corner-ws": {
+   "sheet": "sheets/props-64x96.png",
+   "x": 64,
+   "y": 0,
+   "w": 64,
+   "h": 96,
+   "file": "props/ridge-wall-modules/07-corner-ws.png",
+   "category": "ridge-wall-modules"
+  },
+  "ridge-wall-modules/08-corner-en": {
+   "sheet": "sheets/props-64x96.png",
+   "x": 128,
+   "y": 0,
+   "w": 64,
+   "h": 96,
+   "file": "props/ridge-wall-modules/08-corner-en.png",
+   "category": "ridge-wall-modules"
+  },
+  "ridge-wall-modules/09-corner-wn": {
+   "sheet": "sheets/props-64x96.png",
+   "x": 192,
+   "y": 0,
+   "w": 64,
+   "h": 96,
+   "file": "props/ridge-wall-modules/09-corner-wn.png",
+   "category": "ridge-wall-modules"
+  }
+ }
+}

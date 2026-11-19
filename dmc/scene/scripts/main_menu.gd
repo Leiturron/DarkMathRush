@@ -1,5 +1,9 @@
 extends Control
 
+const STYLED_DIALOG_SCRIPT: Script = preload("res://scene/scripts/styled_dialog.gd")
+const RANKING_SCENE: String = "res://scene/Ranking.tscn"
+const TUTORIAL_SCENE: String = "res://scene/Tutorial.tscn"
+
 @onready var main_buttons: Control = $MenuCenter/MainButtons
 @onready var progress_center: Control = $ProgressCenter
 @onready var name_center: Control = $NameCenter
@@ -7,10 +11,16 @@ extends Control
 @onready var name_line_edit: LineEdit = \
 	$NameCenter/NamePanel/VBoxContainer/NameLineEdit
 
-@onready var info_dialog: AcceptDialog = $InfoDialog
+var info_dialog
+var transition_busy: bool = false
+var fade_rect: ColorRect
 
 
 func _ready() -> void:
+	info_dialog = STYLED_DIALOG_SCRIPT.new()
+	info_dialog.name = "StyledNotice"
+	add_child(info_dialog)
+	_create_fade_layer()
 	progress_center.hide()
 	name_center.hide()
 
@@ -54,6 +64,7 @@ func _ready() -> void:
 	)
 
 	_show_campaign_complete_notice_if_needed()
+	await _fade_in_from_black()
 
 
 func _show_campaign_complete_notice_if_needed() -> void:
@@ -62,11 +73,44 @@ func _show_campaign_complete_notice_if_needed() -> void:
 
 	GameManager.show_campaign_complete_notice = false
 
-	var notice := AcceptDialog.new()
+	var notice = STYLED_DIALOG_SCRIPT.new()
 	notice.title = "¡Felicidades!"
-	notice.dialog_text = "¡Has completado Dark Math Rush!"
+	var record: Dictionary = GameManager.last_completion_record
+	if record.is_empty():
+		notice.dialog_text = "¡Has completado Dark Math Rush!"
+	else:
+		var player_summary := "Jugador: %s\nPuntuación total: %d" % [
+			str(record.get("player_name", "Jugador")),
+			int(record.get("total_score", 0))
+		]
+		notice.dialog_text = (
+			"¡Has completado Dark Math Rush!\n\n" + player_summary
+		)
 	add_child(notice)
 	notice.popup_centered()
+
+
+func _create_fade_layer() -> void:
+	var layer := CanvasLayer.new()
+	layer.layer = 100
+	add_child(layer)
+	fade_rect = ColorRect.new()
+	fade_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	fade_rect.color = Color.BLACK
+	fade_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+	layer.add_child(fade_rect)
+
+
+func _fade_in_from_black() -> void:
+	var tween := create_tween()
+	tween.tween_property(
+		fade_rect,
+		"color:a",
+		0.0,
+		0.8
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	await tween.finished
+	fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
 func _connect_button(button: Button, callback: Callable) -> void:
@@ -104,9 +148,20 @@ func _on_confirm_name_button_pressed() -> void:
 
 
 func _on_leaderboard_button_pressed() -> void:
-	info_dialog.title = "Ranking"
-	info_dialog.dialog_text = GameManager.get_leaderboard_text()
-	info_dialog.popup_centered()
+	if transition_busy:
+		return
+	transition_busy = true
+	fade_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+	var tween := create_tween()
+	tween.tween_property(fade_rect, "color:a", 1.0, 0.38).set_trans(
+		Tween.TRANS_SINE
+	).set_ease(Tween.EASE_IN_OUT)
+	await tween.finished
+	var error := get_tree().change_scene_to_file(RANKING_SCENE)
+	if error != OK:
+		transition_busy = false
+		fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		push_error("No se pudo abrir el ranking.")
 
 
 func _on_quit_button_pressed() -> void:
@@ -124,10 +179,17 @@ func _on_back_name_button_pressed() -> void:
 
 
 func _on_tutorial_button_pressed() -> void:
-	info_dialog.title = "Tutorial"
-	info_dialog.dialog_text = (
-		"WASD: mover al personaje.\n"
-		+ "J: interactuar en el lobby y atacar a los enemigos con la respuesta correcta.\n"
-		+ "K: atacar a los enemigos con una respuesta incorrecta."
-	)
-	info_dialog.popup_centered()
+	if transition_busy:
+		return
+	transition_busy = true
+	fade_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+	var tween := create_tween()
+	tween.tween_property(fade_rect, "color:a", 1.0, 0.38).set_trans(
+		Tween.TRANS_SINE
+	).set_ease(Tween.EASE_IN_OUT)
+	await tween.finished
+	var error := get_tree().change_scene_to_file(TUTORIAL_SCENE)
+	if error != OK:
+		transition_busy = false
+		fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		push_error("No se pudo abrir el tutorial.")

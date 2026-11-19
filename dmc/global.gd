@@ -11,6 +11,7 @@ const LOBBY_SCENES: Dictionary = {
 
 var current_progress: Dictionary = {}
 var show_campaign_complete_notice: bool = false
+var last_completion_record: Dictionary = {}
 
 
 func _ready() -> void:
@@ -50,6 +51,8 @@ func start_new_game(player_name: String) -> void:
 		"wrong_answers": 0,
 		"kills": 0
 	}
+	last_completion_record = {}
+	show_campaign_complete_notice = false
 
 	_write_json(PROGRESS_PATH, current_progress)
 	_go_to_lobby(1)
@@ -211,6 +214,8 @@ func complete_game() -> bool:
 	if not _write_json(LEADERBOARD_PATH, records):
 		return false
 
+	last_completion_record = completion_record.duplicate(true)
+
 	if FileAccess.file_exists(PROGRESS_PATH):
 		var absolute_path: String = \
 			ProjectSettings.globalize_path(PROGRESS_PATH)
@@ -223,6 +228,32 @@ func complete_game() -> bool:
 	current_progress = {}
 	show_campaign_complete_notice = true
 	return true
+
+
+func get_leaderboard_records() -> Array[Dictionary]:
+	var loaded_records: Variant = _read_json(LEADERBOARD_PATH, [])
+	var records: Array[Dictionary] = []
+	if not loaded_records is Array:
+		return records
+
+	for item in loaded_records:
+		if item is Dictionary and item.get("completed", true) == true:
+			records.append(item)
+
+	# Highest score first. Do not mutate the array returned from disk.
+	for i in range(records.size()):
+		for j in range(i + 1, records.size()):
+			var score_i: int = int(
+				records[i].get("total_score", records[i].get("score", 0))
+			)
+			var score_j: int = int(
+				records[j].get("total_score", records[j].get("score", 0))
+			)
+			if score_j > score_i:
+				var temporary: Dictionary = records[i]
+				records[i] = records[j]
+				records[j] = temporary
+	return records
 
 
 func get_leaderboard_text() -> String:

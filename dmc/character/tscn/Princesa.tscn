@@ -1,20 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://du5pvu4avl7yk"]
+[gd_scene load_steps=9 format=3 uid="uid://du5pvu4avl7yk"]
 
-[ext_resource type="Texture2D" uid="uid://crtthye3h832e" path="res://assets/Princesa.png" id="1_c7pjh"]
+[ext_resource type="Texture2D" uid="uid://bkf0rjslj67ui" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elf Princess/HighElf_F_Idle_1.png" id="2_65eek"]
 [ext_resource type="Script" uid="uid://c623pabn2qgem" path="res://character/script/princess.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://dgn0e2l2711bs" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elf Princess/HighElf_F_Idle_2.png" id="3_qbktn"]
+[ext_resource type="Texture2D" uid="uid://cbnibahfqqscg" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elf Princess/HighElf_F_Idle_3.png" id="4_wg0aa"]
+[ext_resource type="Texture2D" uid="uid://dapjj0saedvwk" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elf Princess/HighElf_F_Idle_4.png" id="5_abbqn"]
+[ext_resource type="Texture2D" uid="uid://bcl3idbd8vj2f" path="res://assets/newresource/j.png" id="6_qbktn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djh0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_65eek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qbktn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wg0aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_abbqn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7pjh"]
-size = Vector2(153, 173)
+size = Vector2(26.75, 30.125)
 
 [node name="Princesa" type="Area2D"]
 script = ExtResource("2_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -56)
-scale = Vector2(8, 8)
-texture = ExtResource("1_c7pjh")
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_djh0f")
+autoplay = "default"
+frame_progress = 0.467826
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, 1.5)
+position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_c7pjh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+offset_left = 7.0
+offset_top = -32.0
+offset_right = 71.0
+offset_bottom = 32.0
+scale = Vector2(-0.2, 0.2)
+texture = ExtResource("6_qbktn")

@@ -16,16 +16,21 @@ signal player_contacted
 @onready var visual_root: Node2D = $VisualRoot
 @onready var enemy_sprite: AnimatedSprite2D = $VisualRoot/Sprite2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var dead_sound: AudioStreamPlayer2D = $DeadSound
+@onready var value_label: Label = $ValueLabel
 
 var player: Node2D = null
 var decimal_value: float = 0.0
 var knockback_velocity: Vector2 = Vector2.ZERO
 var contact_timer: float = 0.0
 var enemy_bump_timer: float = 0.0
+var is_dead: bool = false
+var fraction_value_display: VBoxContainer
 
 
 func _ready() -> void:
 	add_to_group("enemies")
+	enemy_sprite.animation_finished.connect(_on_animation_finished)
 	enemy_sprite.play("move")
 	navigation_agent.path_desired_distance = 4.0
 	navigation_agent.target_desired_distance = 8.0
@@ -35,15 +40,77 @@ func setup(
 	target_player: Node2D,
 	decimal_val: float,
 	_is_correct: bool,
-	speed_multiplier: float
+	speed_multiplier: float,
+	answer_display: String = ""
 ) -> void:
 	player = target_player
 	decimal_value = decimal_val
 	speed *= speed_multiplier
-	$ValueLabel.text = str(decimal_value)
+	_set_value_display(answer_display if not answer_display.is_empty() else str(decimal_value))
+
+
+func _set_value_display(display_text: String) -> void:
+	if not display_text.contains("/"):
+		value_label.text = display_text
+		value_label.show()
+		if is_instance_valid(fraction_value_display):
+			fraction_value_display.queue_free()
+		return
+
+	var fraction_parts := display_text.split("/")
+	if fraction_parts.size() != 2:
+		value_label.text = display_text
+		value_label.show()
+		return
+
+	value_label.hide()
+	if is_instance_valid(fraction_value_display):
+		fraction_value_display.queue_free()
+
+	fraction_value_display = VBoxContainer.new()
+	fraction_value_display.name = "FractionValueDisplay"
+	fraction_value_display.anchors_preset = Control.PRESET_CENTER
+	fraction_value_display.anchor_left = 0.5
+	fraction_value_display.anchor_top = 0.5
+	fraction_value_display.anchor_right = 0.5
+	fraction_value_display.anchor_bottom = 0.5
+	fraction_value_display.offset_left = -285.714
+	fraction_value_display.offset_top = -700.0
+	fraction_value_display.offset_right = 284.286
+	fraction_value_display.offset_bottom = -248.0
+	fraction_value_display.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	fraction_value_display.grow_vertical = Control.GROW_DIRECTION_BOTH
+	fraction_value_display.alignment = BoxContainer.ALIGNMENT_CENTER
+	fraction_value_display.add_theme_constant_override("separation", -12)
+
+	var numerator := _make_fraction_part(fraction_parts[0].strip_edges())
+	fraction_value_display.add_child(numerator)
+
+	var line := ColorRect.new()
+	line.color = Color.WHITE
+	line.custom_minimum_size = Vector2(220.0, 7.0)
+	line.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	fraction_value_display.add_child(line)
+
+	var denominator := _make_fraction_part(fraction_parts[1].strip_edges())
+	fraction_value_display.add_child(denominator)
+	add_child(fraction_value_display)
+
+
+func _make_fraction_part(value: String) -> Label:
+	var label := Label.new()
+	label.text = value
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	label.add_theme_font_size_override("font_size", 180)
+	return label
 
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		return
+
 	if not is_instance_valid(player):
 		return
 
@@ -146,5 +213,28 @@ func _check_player_contact() -> void:
 
 
 func receive_attack(action_type: String) -> void:
+	dead_sound.play()
+	if is_dead:
+		return
+
+	is_dead = true
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	enemy_judged.emit(action_type, decimal_value, global_position)
-	queue_free()
+	remove_from_group("enemies")
+	velocity = Vector2.ZERO
+	knockback_velocity = Vector2.ZERO
+	collision_layer = 0
+	collision_mask = 0
+	$CollisionShape2D.set_deferred("disabled", true)
+
+	if enemy_sprite.sprite_frames != null \
+	and enemy_sprite.sprite_frames.has_animation("Dead"):
+		enemy_sprite.sprite_frames.set_animation_loop("Dead", false)
+		enemy_sprite.play("Dead")
+	else:
+		queue_free()
+
+
+func _on_animation_finished() -> void:
+	if is_dead and enemy_sprite.animation == "Dead":
+		queue_free()

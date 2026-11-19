@@ -1,12 +1,16 @@
 extends Node2D
 
+const STYLED_DIALOG_SCRIPT: Script = preload("res://scene/scripts/styled_dialog.gd")
+const BATTLE_HUD: Script = preload("res://scene/scripts/battle_hud.gd")
+
 @export var enemy_scene: PackedScene
 const HEART_SCENE: PackedScene = preload("res://character/tscn/heart.tscn")
 const MAX_HEALTH: int = 3
 
 var battle_finished: bool = false
 var campaign_completed: bool = false
-var result_dialog: AcceptDialog
+var has_campaign_progress: bool = false
+var result_dialog
 var wrong_questions: Array[Dictionary] = []
 
 var health: int = 3
@@ -17,8 +21,12 @@ var questions_oa3: Dictionary = {}
 var current_question_set: Array = []
 var current_correct_decimal: float = 0.0
 
+@onready var heartSound: AudioStreamPlayer = $heartSound
 
 func _ready() -> void:
+	# BattleCave can also be run directly from the editor for testing.
+	has_campaign_progress = GameManager.has_saved_progress()
+
 	# Colocar al jugador en su punto de aparición
 	if has_node("spawn"):
 		$Player.global_position = $spawn.global_position
@@ -32,7 +40,7 @@ func _ready() -> void:
 		push_error("No se pudieron cargar preguntas del nivel 3.")
 		return
 
-	result_dialog = AcceptDialog.new()
+	result_dialog = STYLED_DIALOG_SCRIPT.new()
 	result_dialog.process_mode = Node.PROCESS_MODE_ALWAYS
 	result_dialog.confirmed.connect(_on_result_confirmed)
 	add_child(result_dialog)
@@ -69,7 +77,7 @@ func load_questions_from_txt(file_path: String) -> Dictionary:
 
 		var parts := line.split("|")
 
-		if parts.size() != 4:
+		if parts.size() != 4 and parts.size() != 7:
 			push_warning("Formato de pregunta incorrecto: " + line)
 			continue
 
@@ -78,10 +86,21 @@ func load_questions_from_txt(file_path: String) -> Dictionary:
 		var wrong_answer_1: float = parts[2].to_float()
 		var wrong_answer_2: float = parts[3].to_float()
 
+		var correct_display: String = str(correct_answer)
+		var wrong_display_1: String = str(wrong_answer_1)
+		var wrong_display_2: String = str(wrong_answer_2)
+		if parts.size() == 7:
+			correct_display = parts[4].strip_edges()
+			wrong_display_1 = parts[5].strip_edges()
+			wrong_display_2 = parts[6].strip_edges()
+
 		loaded_questions[question_text] = [
 			correct_answer,
 			wrong_answer_1,
-			wrong_answer_2
+			wrong_answer_2,
+			correct_display,
+			wrong_display_1,
+			wrong_display_2
 		]
 
 	file.close()
@@ -95,24 +114,30 @@ func generate_new_question() -> void:
 		push_error("No hay preguntas disponibles.")
 		return
 
+	var previous_question: String = $UI/QuestionLabel.text
+	if current_question_set.size() > 1:
+		current_question_set.erase(previous_question)
+
 	var question_text: String = current_question_set.pick_random()
 	current_correct_decimal = questions_oa3[question_text][0]
 
 	# Mostrar solo la pregunta
 	$UI/QuestionLabel.text = question_text
+	BATTLE_HUD.display_question($UI, question_text)
 
 
-func get_enemy_value() -> float:
+func get_enemy_value() -> Dictionary:
 	var question_text: String = $UI/QuestionLabel.text
 	var answers: Array = questions_oa3[question_text]
 
-	# El 30 % de los enemigos muestra la respuesta correcta
-	if randf() < 0.3:
-		return current_correct_decimal
+	var answer_index: int = 0
+	if randf() >= 0.5:
+		answer_index = randi_range(1, 2)
 
-	# Los demás muestran una respuesta incorrecta
-	var wrong_answers: Array = [answers[1], answers[2]]
-	return float(wrong_answers.pick_random())
+	return {
+		"value": float(answers[answer_index]),
+		"display": str(answers[answer_index + 3])
+	}
 
 
 func _on_enemy_judged(
@@ -134,7 +159,8 @@ func _on_enemy_judged(
 		(action_type == "wrong" and not is_correct_answer)
 	)
 
-	GameManager.record_answer_result(is_successful, 10)
+	if has_campaign_progress:
+		GameManager.record_answer_result(is_successful, 10)
 
 	if is_successful:
 		kills += 1
@@ -175,8 +201,10 @@ func _record_wrong_question() -> void:
 		"correct_answer": current_correct_decimal
 	})
 
-func _get_wrong_questions_report() -> String:
+func _get_wrong_questions_report(monster_kill: bool = false) -> String:
 	if wrong_questions.is_empty():
+		if monster_kill:
+			return "\n\n¡Los monstruos te han dejado aturdido!"
 		return "\n\n¡Muy bien! No cometiste errores."
 
 	var report: String = "\n\nPreguntas incorrectas y su respuesta correcta:\n"
@@ -201,6 +229,7 @@ func _try_spawn_heart(drop_position: Vector2) -> void:
 
 
 func _on_heart_collected() -> void:
+	heartSound.play()
 	if health >= MAX_HEALTH:
 		return
 
@@ -209,7 +238,7 @@ func _on_heart_collected() -> void:
 
 
 func update_ui() -> void:
-	$UI/HealthLabel.text = "Vidas: %d" % health
+	BATTLE_HUD.update_health($UI, health)
 	$UI/ScoreLabel.text = "Puntaje: %d" % score
 
 
@@ -240,7 +269,15 @@ func _on_spawn_timer_timeout() -> void:
 	add_child(enemy)
 	enemy.global_position = spawn_point.global_position
 
-	enemy.call("setup", $Player, get_enemy_value(), false, 1.0)
+	var answer: Dictionary = get_enemy_value()
+	enemy.call(
+		"setup",
+		$Player,
+		float(answer["value"]),
+		false,
+		1.0,
+		str(answer["display"])
+	)
 	enemy.connect("enemy_judged", _on_enemy_judged)
 	enemy.connect("player_contacted", _on_enemy_player_contacted)
 
@@ -268,21 +305,38 @@ func _finish_battle(victory: bool) -> void:
 
 	battle_finished = true
 	$SpawnTimer.stop()
-	GameManager.save_run_stats(score, kills)
+	if has_campaign_progress:
+		GameManager.save_run_stats(score, kills)
 
 	if victory:
-		if not GameManager.complete_game():
-			battle_finished = false
-			return
+		if has_campaign_progress:
+			if not GameManager.complete_game():
+				battle_finished = false
+				return
+		else:
+			# Allow standalone scene testing without writing a fake leaderboard entry.
+			GameManager.show_campaign_complete_notice = true
 
 		campaign_completed = true
 		result_dialog.title = "Victoria"
-		result_dialog.dialog_text = "¡Has completado Dark Math Rush!"
+		var record: Dictionary = GameManager.last_completion_record
+		if record.is_empty():
+			result_dialog.dialog_text = "¡Has completado Dark Math Rush!"
+		else:
+			var player_summary := "Jugador: %s\nPuntuación total: %d" % [
+				str(record.get("player_name", "Jugador")),
+				int(record.get("total_score", 0))
+			]
+			result_dialog.dialog_text = (
+				"¡Has completado Dark Math Rush!\n\n" + player_summary
+			)
 	else:
 		result_dialog.title = "Derrota"
 		result_dialog.dialog_text = "Te has quedado sin vidas."
 
-	result_dialog.dialog_text += _get_wrong_questions_report()
+	result_dialog.dialog_text += _get_wrong_questions_report(
+		not victory and wrong_questions.is_empty()
+	)
 	get_tree().paused = true
 	result_dialog.popup_centered()
 
@@ -291,6 +345,6 @@ func _on_result_confirmed() -> void:
 	get_tree().paused = false
 
 	if campaign_completed:
-		get_tree().change_scene_to_file("res://scene/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://uitest.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scene/LobbyCave.tscn")

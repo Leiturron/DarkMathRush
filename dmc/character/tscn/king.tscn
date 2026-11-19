@@ -1,18 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://y7g008fqckn6"]
+[gd_scene load_steps=9 format=3 uid="uid://y7g008fqckn6"]
 
-[ext_resource type="Texture2D" uid="uid://diu06wy57dkpy" path="res://assets/king.png" id="1_xwao3"]
+[ext_resource type="Texture2D" uid="uid://b86qey1j4h06i" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elven King/HighElf_M_Idle + Walk_1.png" id="1_eff6b"]
+[ext_resource type="Texture2D" uid="uid://cwdsfx1qdjc16" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elven King/HighElf_M_Idle + Walk_2.png" id="2_x5yq4"]
+[ext_resource type="Texture2D" uid="uid://bey66rjwtwn7h" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elven King/HighElf_M_Idle + Walk_3.png" id="3_7pkje"]
+[ext_resource type="Texture2D" uid="uid://c65gi637kcvt" path="res://assets/newresource/Enchanted Forest - Individual Frames/Elven King/HighElf_M_Idle + Walk_4.png" id="4_gs2ip"]
+[ext_resource type="Texture2D" uid="uid://bcl3idbd8vj2f" path="res://assets/newresource/j.png" id="5_x5yq4"]
+[ext_resource type="Script" uid="uid://cq57qggx36jle" path="res://character/script/king.gd" id="6_king_script"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36yy8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eff6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x5yq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7pkje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gs2ip")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3xhh"]
-size = Vector2(103.797, 96.5)
+size = Vector2(17.9688, 18.6)
 
 [node name="King" type="Area2D"]
+script = ExtResource("6_king_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4, -34)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_xwao3")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+sprite_frames = SubResource("SpriteFrames_36yy8")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.781978
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(-0.5, 3.5)
 scale = Vector2(1.3913, 1.66667)
 shape = SubResource("RectangleShape2D_t3xhh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+offset_left = -6.0
+offset_top = -29.0
+offset_right = 58.0
+offset_bottom = 35.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_x5yq4")

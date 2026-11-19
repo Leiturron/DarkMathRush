@@ -1,0 +1,647 @@
+[gd_scene load_steps=17 format=3 uid="uid://bjawvdiadapvm"]
+
+[ext_resource type="Texture2D" uid="uid://b8d2yenrvaj6x" path="res://assets/newresource/mainBG.png" id="1_qi6x7"]
+[ext_resource type="Texture2D" uid="uid://bgxvw6do5v01i" path="res://assets/newresource/title.png" id="2_n2enf"]
+[ext_resource type="Texture2D" uid="uid://cd32jujcwl20t" path="res://assets/newresource/menu_left.png" id="3_cwp4m"]
+[ext_resource type="FontFile" uid="uid://dtgr6eravi8rw" path="res://assets/ttf/TiejiliSC-Regular.ttf" id="3_n4cbm"]
+[ext_resource type="Texture2D" uid="uid://btgidbxohrjxm" path="res://assets/newresource/menu_right.png" id="4_kc60b"]
+[ext_resource type="Script" uid="uid://cip6rx4p6iviu" path="res://start_button.gd" id="4_nwne8"]
+[ext_resource type="Script" uid="uid://chw6vio4tilhw" path="res://uitest.gd" id="5_uitest"]
+[ext_resource type="AudioStream" uid="uid://q5t3mp80yyfs" path="res://assets/soundEffects/hold.wav" id="8_5l8ot"]
+[ext_resource type="AudioStream" uid="uid://b0x7ry0gi1o68" path="res://assets/soundEffects/click.wav" id="9_s4cu8"]
+[ext_resource type="AudioStream" uid="uid://b1o5jxlrodny4" path="res://assets/soundEffects/jugarSound.wav" id="10_bbhl8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4cbm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nwne8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fsyhw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7747"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_submenu"]
+content_margin_left = 32.0
+content_margin_top = 28.0
+content_margin_right = 32.0
+content_margin_bottom = 28.0
+bg_color = Color(0.012, 0.028, 0.075, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.686275, 0.776471, 0.909804, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_name_field"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+bg_color = Color(0.015, 0.035, 0.085, 0.94)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.509804, 0.607843, 0.752941, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="UITest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_uitest")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_qi6x7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.075
+anchor_right = 0.5
+anchor_bottom = 0.127
+offset_left = -400.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("2_n2enf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MenuLayer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuLayer"]
+layout_mode = 1
+offset_left = 500.0
+offset_top = 370.0
+offset_right = 780.0
+offset_bottom = 600.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MenuLayer/MenuContainer"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "JUGAR"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/StartButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -25.0
+offset_right = -250.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/StartButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 250.0
+offset_top = -25.0
+offset_right = 330.0
+offset_bottom = 25.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TutorialButton" type="Button" parent="MenuLayer/MenuContainer"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "TUTORIAL"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/TutorialButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -25.0
+offset_right = -250.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/TutorialButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 250.0
+offset_top = -25.0
+offset_right = 330.0
+offset_bottom = 25.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RankingButton" type="Button" parent="MenuLayer/MenuContainer"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "RANKING"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/RankingButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -25.0
+offset_right = -250.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/RankingButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 250.0
+offset_top = -25.0
+offset_right = 330.0
+offset_bottom = 25.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ExitButton" type="Button" parent="MenuLayer/MenuContainer"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "SALIR"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -25.0
+offset_right = -250.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="MenuLayer/MenuContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 250.0
+offset_top = -25.0
+offset_right = 330.0
+offset_bottom = 25.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SubmenuDimmer" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.005, 0.012, 0.035, 0.78)
+
+[node name="ProgressCenter" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressPanel" type="PanelContainer" parent="ProgressCenter"]
+custom_minimum_size = Vector2(520, 310)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_submenu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ProgressCenter/ProgressPanel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="ProgressCenter/ProgressPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.917647, 0.964706, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 28
+text = "PARTIDA GUARDADA"
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="ProgressCenter/ProgressPanel/VBoxContainer"]
+custom_minimum_size = Vector2(360, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "CONTINUAR"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/ContinueButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -22.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/ContinueButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 76.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NewGameButton" type="Button" parent="ProgressCenter/ProgressPanel/VBoxContainer"]
+custom_minimum_size = Vector2(360, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "JUEGO NUEVO"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/NewGameButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -22.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/NewGameButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 76.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackProgressButton" type="Button" parent="ProgressCenter/ProgressPanel/VBoxContainer"]
+custom_minimum_size = Vector2(360, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "VOLVER"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/BackProgressButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -22.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="ProgressCenter/ProgressPanel/VBoxContainer/BackProgressButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 76.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameCenter" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NamePanel" type="PanelContainer" parent="NameCenter"]
+custom_minimum_size = Vector2(560, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_submenu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NameCenter/NamePanel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="NameCenter/NamePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.890196, 0.917647, 0.964706, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 28
+text = "NUEVA PARTIDA"
+horizontal_alignment = 1
+
+[node name="NameLineEdit" type="LineEdit" parent="NameCenter/NamePanel/VBoxContainer"]
+custom_minimum_size = Vector2(440, 52)
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.568627, 0.643137, 0.756863, 1)
+theme_override_colors/font_color = Color(0.898039, 0.92549, 0.968627, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/focus = SubResource("StyleBoxFlat_name_field")
+theme_override_styles/normal = SubResource("StyleBoxFlat_name_field")
+placeholder_text = "Escribe tu nombre"
+alignment = 1
+
+[node name="NameButtons" type="HBoxContainer" parent="NameCenter/NamePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="BackNameButton" type="Button" parent="NameCenter/NamePanel/VBoxContainer/NameButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "VOLVER"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="NameCenter/NamePanel/VBoxContainer/NameButtons/BackNameButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -22.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="NameCenter/NamePanel/VBoxContainer/NameButtons/BackNameButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 76.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ConfirmNameButton" type="Button" parent="NameCenter/NamePanel/VBoxContainer/NameButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.780392, 0.835294, 0.909804, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n4cbm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4cbm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwne8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsyhw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v7747")
+text = "CONFIRMAR"
+script = ExtResource("4_nwne8")
+
+[node name="LeftDecoration" type="TextureRect" parent="NameCenter/NamePanel/VBoxContainer/NameButtons/ConfirmNameButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -22.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_cwp4m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightDecoration" type="TextureRect" parent="NameCenter/NamePanel/VBoxContainer/NameButtons/ConfirmNameButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 76.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_kc60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InfoDialog" type="AcceptDialog" parent="."]
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="FadeRect" type="ColorRect" parent="TransitionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="EnteredSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5l8ot")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_s4cu8")
+
+[node name="PlaySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_bbhl8")

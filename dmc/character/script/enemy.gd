@@ -15,16 +15,19 @@ signal player_contacted
 
 @onready var visual_root: Node2D = $VisualRoot
 @onready var enemy_sprite: AnimatedSprite2D = $VisualRoot/Sprite2D
+@onready var dead_sound: AudioStreamPlayer2D = $DeadSound
 
 var player: Node2D = null
 var decimal_value: float = 0.0
 var knockback_velocity: Vector2 = Vector2.ZERO
 var contact_timer: float = 0.0
 var enemy_bump_timer: float = 0.0
+var is_dead: bool = false
 
 
 func _ready() -> void:
 	add_to_group("enemies")
+	enemy_sprite.animation_finished.connect(_on_animation_finished)
 	enemy_sprite.play("move")
 
 
@@ -41,6 +44,9 @@ func setup(
 
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		return
+
 	if not is_instance_valid(player):
 		return
 
@@ -140,5 +146,28 @@ func _check_player_contact() -> void:
 
 
 func receive_attack(action_type: String) -> void:
+	dead_sound.play()
+	if is_dead:
+		return
+
+	is_dead = true
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	enemy_judged.emit(action_type, decimal_value, global_position)
-	queue_free()
+	remove_from_group("enemies")
+	velocity = Vector2.ZERO
+	knockback_velocity = Vector2.ZERO
+	collision_layer = 0
+	collision_mask = 0
+	$CollisionShape2D.set_deferred("disabled", true)
+
+	if enemy_sprite.sprite_frames != null \
+	and enemy_sprite.sprite_frames.has_animation("Dead"):
+		enemy_sprite.sprite_frames.set_animation_loop("Dead", false)
+		enemy_sprite.play("Dead")
+	else:
+		queue_free()
+
+
+func _on_animation_finished() -> void:
+	if is_dead and enemy_sprite.animation == "Dead":
+		queue_free()
